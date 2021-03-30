@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Scuba Central</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <a href='/products'><button>Back to Main Page</button></a>
+    <main>
+                <img src='<%= product.img %>'/>
+                <h2><%= product.name %></h2>
+                <a href='/products/<%= product._id %>/edit'><button>Edit Product</button></a>
+                <a href='/products/buy/<%= product._id %>' class='<%= product.qty < 1 ? "out-of-stock" : "in-stock" %>'><button>buy</button></a>
+                <form action='/products/<%= product._id %>?_method=DELETE' method=post>
+                    <input type='submit' value='delete product'/>
+                </form>
+    </main>
+</body>
+</html>

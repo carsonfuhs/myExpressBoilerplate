@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Scuba Central</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <a href='/products/new'><button>Add a new product</button></a>
+    <main>
+        <% for (product of products) { %>
+        
+            <article>
+                <a href='/products/<%= product._id %>'><img src='<%= product.img %>'/></a>
+                <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
+                <p>Price: <%= product.price %></p>
+                <p class='<%= product.qty < 1 ? "out-of-stock" : "in-stock" %>'>Quantity: <%= product.qty %></p>
+                <a href='/products/buy/<%= product._id %>'><button class='<%= product.qty < 1 ? "out-of-stock" : "in-stock" %>'>buy</button></a>
+            </article>
+
+        <% } %>
+    </main>
+</body>
+</html>

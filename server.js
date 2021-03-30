@@ -34,10 +34,17 @@ app.use(express.urlencoded({extended: false}))
 
 
 //routes and routers
+const ProductRouter = require('./routes/products')
+
 //test route
-app.get('/', (req, res) => {
-    res.send('<h1>Hello World</h1>')
-})
+// app.get('/', (req, res) => {
+//     res.send('<h1>Hello World</h1>')
+// })
+
+//app.use('/', ProductRouter)
+
+//app.use('/', indexRouter)
+app.use('/products', ProductRouter)
 
 
 //app listener

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Scuba Central</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <a href='/products'><button>Back to Main Page</button></a>
+    <main>
+        <form action='/products' method='post'>
+            <input type='text' placeholder='Product Name' name='name'/>
+            <input type='text' placeholder="Product Description" name='description'/>
+            <input type='text' placeholder='Image URL here' name='img'/>
+            <input type='number' placeholder='Price' name='price' />
+            <input type='number' placeholder='Quantity' name='qty' />
+            <input type='submit' value='add product'>
+        </form>
+    </main>
+</body>
+</html>

@@ -19,7 +19,8 @@ Mongoose Config Object
 const config = {
     useNewUrlParse: true,
     useUnifiedTopology: true,
-    useCreateIndex:true
+    useCreateIndex: true,
+    useFindAndModify: false,
 }
 
 
